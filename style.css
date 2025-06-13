@@ -1,0 +1,88 @@
+:root {
+  --primary-color: #6c5ce7;
+  --accent-color: #a29bfe;
+  --text-color: #2d3436;
+  --white: #ffffff;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+form {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: min(489px, 90%);
+  min-width: 350px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+form h1 {
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+form input[type="text"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-bottom: 2px solid var(--accent-color);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+form input[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-color);
+}
+
+#copy {
+  color: var(--white);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+#copy:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  form {
+    margin: 1rem;
+  }
+}
